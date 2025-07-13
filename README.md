@@ -28,61 +28,100 @@ Thumbs.db
 
 # Node modules (if any frontend uses npm)# Kitchen Story
 
-## Overview
-Kitchen Story is a Spring Boot application designed to manage food items, allowing users to search for items, place orders, and enabling admins to manage the inventory.
+## Project Overview
+Kitchen Story is a modern Spring Boot web application for managing a food ordering platform.  
+It allows users to search for food items, view details, and place orders.  
+Admins can log in to manage inventory, add new items, and view analytics via a visually appealing dashboard.
+
+---
+
+## Features
+- **User Side**
+  - Search and browse available food items
+  - View item details and prices
+  - Place orders and view order summaries
+- **Admin Side**
+  - Secure admin login
+  - Add, view, and delete food items
+  - Dashboard with charts and statistics
+
+---
 
 ## Project Structure
 ```
 kitchen-story
-├── pom.xml                             # Maven project file (add dependencies here)
+├── pom.xml
 ├── src/
 │   └── main/
 │       ├── java/
 │       │   └── com/
 │       │       └── kitchenstory/
-│       │           ├── KitchenStoryApplication.java     # Main class
+│       │           ├── KitchenStoryApplication.java
 │       │           ├── controller/
-│       │           │   ├── HomeController.java          # For user pages
-│       │           │   └── AdminController.java         # For admin panel
 │       │           ├── model/
-│       │           │   └── FoodItem.java                # Entity class
 │       │           ├── repository/
-│       │           │   └── FoodItemRepository.java      # JPA repository
 │       │           └── service/
-│       │               └── FoodItemService.java         # Business logic (optional)
-│
 │       └── resources/
 │           ├── static/
 │           │   ├── css/
-│           │   │   └── styles.css                       # Custom styling
-│           │   ├── js/
-│           │   │   └── script.js                        # JavaScript functions
+│           │   └── js/
 │           ├── templates/
-│           │   ├── home.html                            # Home page with search
-│           │   ├── results.html                         # Show food items
-│           │   ├── order.html                           # Order summary page
-│           │   ├── payment.html                         # Payment confirmation
-│           │   ├── confirmation.html                    # Final confirmation
-│           │   ├── admin-login.html                     # Admin login page
-│           │   ├── admin-dashboard.html                 # Admin view of items
-│           │   └── admin-add-item.html                  # Add item form
-│           └── application.properties                   # Spring Boot config
-└── README.md                                              # Project documentation
+│           └── application.properties
+└── README.md
 ```
 
-## Features
-- User can search for food items.
-- Users can place orders and view order summaries.
-- Admins can log in to manage food items, including adding new items.
+---
+
+## Sprint Plan
+
+| Sprint | Goals                                                                 | Timeline         |
+|--------|-----------------------------------------------------------------------|------------------|
+| 1      | Project setup, basic entities, user home page, search functionality   | 13-17 July 2025  |
+| 2      | Admin login, add/delete items, admin dashboard UI                     | 18-22 July 2025  |
+| 3      | Chart integration, order flow, payment & confirmation pages           | 23-27 July 2025  |
+| 4      | Testing, bug fixes, documentation, deployment                         | 28-31 July 2025  |
+
+---
+
+## Developer
+
+- Aryan Singhal
+
+---
 
 ## Getting Started
-1. Clone the repository.
-2. Navigate to the project directory.
-3. Build the project using Maven.
-4. Run the application.
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/kitchen-story.git
+   cd kitchen-story
+   ```
+2. **Build the project:**
+   ```sh
+   mvn clean install
+   ```
+3. **Run the application:**
+   ```sh
+   mvn spring-boot:run
+   ```
+4. **Access the app:**
+   - User: [http://localhost:8080/](http://localhost:8080/)
+   - Admin: [http://localhost:8080/admin](http://localhost:8080/admin)
+
+---
 
 ## Dependencies
-Add necessary dependencies in the `pom.xml` file to support Spring Boot, JPA, and any other required libraries.
+
+- Spring Boot
+- Spring Data JPA
+- Thymeleaf
+- H2/MySQL (choose your DB)
+- Chart.js (for dashboard charts)
+
+Add dependencies in `pom.xml` as needed.
+
+---
 
 ## License
+
 This project is licensed under the MIT License.
