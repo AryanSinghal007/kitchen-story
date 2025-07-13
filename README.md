@@ -1,33 +1,3 @@
-# Maven target directory
-/target/
-
-# IntelliJ IDEA files
-*.iml
-.idea/
-*.ipr
-*.iws
-
-# VS Code settings
-.vscode/
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Environment files
-.env
-
-# Compiled class files
-*.class
-
-# Backup files
-*~
-
-# Node modules (if any frontend uses npm)# Kitchen Story
-
 ## Project Overview
 Kitchen Story is a modern Spring Boot web application for managing a food ordering platform.  
 It allows users to search for food items, view details, and place orders.  
