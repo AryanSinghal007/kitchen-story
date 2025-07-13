@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Food Item</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container add-item-container">
+    <h2 class="add-item-title">Add New Food Item</h2>
+
+    <form action="/admin/add" method="post" th:object="${item}" class="add-item-form">
+        <label class="add-item-label">Name:</label>
+        <input type="text" th:field="*{name}" class="add-item-input" required>
+
+        <label class="add-item-label">Description:</label>
+        <input type="text" th:field="*{description}" class="add-item-input" required>
+
+        <label class="add-item-label">Price:</label>
+        <input type="number" th:field="*{price}" step="0.01" class="add-item-input" required>
+
+        <button type="submit" class="add-item-btn">Add Item</button>
+    </form>
+</div>
+</body>
+</html>

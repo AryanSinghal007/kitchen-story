@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard - Kitchen Story</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="admin-container">
+    <h1 class="admin-title">Dashboard</h1>
+    
+    <div class="admin-actions">
+        <a href="/admin/add" class="add-btn">+ Add New Item</a>
+    </div>
+    
+    <h2 class="section-title">Food Items List</h2>
+    <ul class="admin-items-list" th:if="${items}" th:each="item : ${items}">
+        <li class="admin-item-card">
+            <div>
+                <span class="item-name" th:text="${item.name}">Item Name</span>
+                <span class="item-price" th:text="'₹' + ${item.price}">Price</span>
+            </div>
+            <div class="item-desc" th:text="${item.description}">Description</div>
+            <a th:href="@{/admin/delete/{id}(id=${item.id})}" class="delete-btn">Delete</a>
+        </li>
+    </ul>
+    <div th:if="${#lists.isEmpty(items)}" class="empty-list-msg">No items available.</div>
+
+    <!-- <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <h2>Total Items</h2>
+            <p class="dashboard-number" th:text="${totalItems}">0</p>
+        </div>
+        <div class="dashboard-card">
+            <h2>Total Categories</h2>
+            <p class="dashboard-number" th:text="${totalCategories}">0</p>
+        </div>
+    </div> -->
+    
+    <div class="charts-section">
+        <div class="chart-card">
+            <h3>Stock by Item</h3>
+            <canvas id="stockChart"></canvas>
+        </div>
+    </div>
+</div>
+<script src="/js/admin-dashboard.js"></script>
+</body>
+</html>

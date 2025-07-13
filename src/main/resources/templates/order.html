@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Order Summary</h2>
+
+    <p><strong>Item:</strong> <span th:text="${item.name}"></span></p>
+    <p><strong>Price:</strong> ₹<span th:text="${item.price}"></span></p>
+    <p><strong>Description:</strong> <span th:text="${item.description}"></span></p>
+
+    <form action="/confirm" method="post">
+        <input type="hidden" name="itemId" th:value="${item.id}">
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kitchen Story - Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="main-title">Welcome to <span class="brand">Kitchen Story</span></h1>
+
+    <form action="/search" method="post" class="search-form">
+        <label class="search-label">Search for food:</label><br>
+        <input type="text" name="keyword" class="search-input" placeholder="Enter food item" required>
+        <button type="submit" class="search-btn">Search</button>
+    </form>
+
+    <div id="available-items" class="items-section">
+        <h2>Available Items</h2>
+        <ul class="items-list">
+            <li th:each="item : ${foodItems}" class="item-card">
+                <span class="item-name" th:text="${item.name}">Item Name</span>
+                <span class="item-price" th:text="'₹' + ${item.price}">Price</span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

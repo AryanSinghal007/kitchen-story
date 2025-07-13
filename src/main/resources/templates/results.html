@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Available Food Items:</h2>
+
+    <div th:if="${#lists.isEmpty(items)}">
+        <p>No items found.</p>
+    </div>
+
+    <ul th:each="item : ${items}">
+        <li>
+            <strong th:text="${item.name}"></strong> - ₹<span th:text="${item.price}"></span><br>
+            <em th:text="${item.description}"></em><br>
+            <a th:href="@{/order/{id}(id=${item.id})}">Order Now</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
