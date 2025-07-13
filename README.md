@@ -1,3 +1,5 @@
+# Kitchen Story
+
 ## Project Overview
 Kitchen Story is a modern Spring Boot web application for managing a food ordering platform.  
 It allows users to search for food items, view details, and place orders.  
@@ -44,12 +46,12 @@ kitchen-story
 
 ## Sprint Plan
 
-| Sprint | Goals                                                                 | Timeline         |
-|--------|-----------------------------------------------------------------------|------------------|
-| 1      | Project setup, basic entities, user home page, search functionality   | 13-17 July 2025  |
-| 2      | Admin login, add/delete items, admin dashboard UI                     | 18-22 July 2025  |
-| 3      | Chart integration, order flow, payment & confirmation pages           | 23-27 July 2025  |
-| 4      | Testing, bug fixes, documentation, deployment                         | 28-31 July 2025  |
+| Sprint | Goals                                                                 | Duration |
+|--------|-----------------------------------------------------------------------|----------|
+| 1      | Project setup, basic entities, user home page, search functionality   | 2 days   |
+| 2      | Admin login, add/delete items, admin dashboard UI                     | 2 days   |
+| 3      | Chart integration, order flow, payment & confirmation pages           | 3 days   |
+| 4      | Testing, bug fixes, documentation, deployment                         | 2 days   |
 
 ---
 
